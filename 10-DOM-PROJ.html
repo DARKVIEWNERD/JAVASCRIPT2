@@ -1,0 +1,131 @@
+<!doctype html>
+  <html>
+    <head>
+      <title>DOM Projects</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+      <style>
+        
+        body{
+          font-family: roboto,Arial, Helvetica, sans-serif;
+          
+         
+        }
+        .title{
+          font-weight: bold;
+        }
+        .subcribe-bottom{
+          border: none;
+          border-radius: 50px;
+          color: white;
+          font-weight: bold;
+          background-color: black;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-bottom: 20px;
+          cursor: pointer;
+         
+        }
+        .is-subcribed{
+          background-color:  rgb(240,240,240);
+          color: black;
+        }
+        .textbox{
+          font-size: 15px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .Calculate-buttom{
+          font-size: 15px;
+          background-color: green;
+          border: none;
+          color: white;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-left: 15px;
+          padding-right: 15px;
+          cursor: pointer;
+        }
+      </style>
+    </head>
+    <body>
+      <p class="title">
+        Youtube Subcribe Button
+      </p>
+      <button class="js-buttom subcribe-bottom"
+      onclick="subcribe()">Subcribe</button>
+      <p class="title">
+        ROCK-PAPER-SCISSOR
+      </p>
+      <p>
+        <a href="GAME.html">Click here!</a>
+        <a href="10-ROCK-PAPER-SCISSOR .HTML">Click here! ver.2</a>
+      </p>
+      <p class="title">
+        Amazon Shipping Calculator 
+      </p>
+      <p>
+        Orders under $40=+$10 Shipping.
+      </p>
+      <p>
+        Orders over $40= FREE    Shipping.
+      </p>
+      <p>
+        <input type="text" placeholder="Cost of an orders"class="js-inputText textbox"
+        onkeydown="keypress(event)">
+        <button class="Calculate-buttom" onclick="Calculate();">Calculate</button>
+      </p>
+      <p class="js-order-result"></p>
+      
+      
+      
+      <script>
+        //window represent the browser
+        //document represent object
+        function Calculate(){
+          
+          const inputElement=document.querySelector('.js-inputText');
+          console.log(inputElement.value);  
+          let cost=(inputElement.value*100);//cost=Number(inputElement.value) to convert it to number
+          //since it has number it automatically save as a number
+          if(cost<4000){
+            cost=(cost+1000)/100;
+            
+          }
+          else{
+          cost=(cost)/100;
+          }
+          document.querySelector('.js-order-result').innerHTML=(`$${cost}`);
+        }
+        function keypress(event){
+          let  key=event.key;
+          if(key==='Enter'){
+            Calculate();
+          }
+          else if(key==='Escape'){
+            document.querySelector('.js-inputText').value='';
+          }
+          console.log(event.key);
+            //onclick triggered by clicking, hovering etc.
+          //onkeydown is by clicking down keys.
+        }
+        function subcribe(){
+          let buttomSubcribe=document.querySelector('.js-buttom');
+          if(buttomSubcribe.innerHTML==='Subcribe'){
+            document.querySelector('.js-buttom').innerHTML='Subcribed';
+            buttomSubcribe.classList.add('is-subcribed');
+          }
+          else{
+          document.querySelector('.js-buttom').innerHTML='Subcribe';
+          buttomSubcribe.classList.remove('is-subcribed');
+          }
+        
+        }
+      </script>
+    </body>
+    </html>

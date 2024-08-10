@@ -1,0 +1,79 @@
+<!doctype html>
+  <html>
+    <head>
+      <title>DOM Projects</title>
+    </head>
+    <body>
+      <p>
+        Youtube Subcribe Button
+      </p>
+      <button class="js-buttom"
+      onclick="subcribe()">
+        Subcribe
+      </button>
+      <p>
+        ROCK-PAPER-SCISSOR
+      </p>
+      <p>
+        <a href="GAME.html">Click here!</a>
+      </p>
+      <p>
+        Amazon Shipping Calculator 
+      </p>
+      <p>
+        Orders under $40=+$10 Shipping.
+      </p>
+      <p>
+        Orders over $40= FREE    Shipping.
+      </p>
+      <p>
+        <input type="text" placeholder="Cost of an orders"class="js-inputText"
+        onkeydown="keypress(event)">
+        <button onclick="Calculate();">Calculate</button>
+      </p>
+      <p class="js-order-result"></p>
+      
+      
+      
+      <script>
+        //window represent the browser
+        //document represent object
+        function Calculate(){
+          
+          const inputElement=document.querySelector('.js-inputText');
+          console.log(inputElement.value);  
+          let cost=(inputElement.value*100);//cost=Number(inputElement.value) to convert it to number
+          //since it has number it automatically save as a number
+          if(cost<4000){
+            cost=(cost+1000)/100;
+            
+          }
+          else{
+          cost=(cost)/100;
+          }
+          document.querySelector('.js-order-result').innerHTML=(`$${cost}`);
+        }
+        function keypress(event){
+          let  key=event.key;
+          if(key==='Enter'){
+            Calculate();
+          }
+          else if(key==='Escape'){
+            document.querySelector('.js-inputText').value='';
+          }
+          console.log(event.key);
+            //onclick triggered by clicking, hovering etc.
+          //onkeydown is by clicking down keys.
+        }
+        function subcribe(){
+          let buttonSubcribe=document.querySelector('.js-buttom');
+          if(buttonSubcribe.innerHTML==='Subcribe'){
+            document.querySelector('.js-buttom').innerHTML='Subcribed';
+          }
+          else
+          document.querySelector('.js-buttom').innerHTML='Subcribe';
+        
+        }
+      </script>
+    </body>
+    </html>

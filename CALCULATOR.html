@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title> Calculator</title>
+    </head>
+    <body>
+     
+      <p>
+        <button 
+        onclick="
+          calculator=calculator+`7`;
+          console.log(`7`)">7</button>
+        <button
+        onclick="
+          calculator=calculator+`8`;
+          console.log(`8`)">8</button>
+        <button
+        onclick="
+          calculator=calculator+`9`;
+          console.log(`9`)">9</button>
+      </p>
+       <p>
+        <button onclick="
+          calculator=calculator+`4`;
+          console.log(`4`)">4</button>
+        <button
+        onclick="
+          calculator=calculator+`5`;
+          console.log(`5`)">5</button>
+        <button
+        onclick="
+          calculator=calculator+`6`;
+          console.log(`6`)">6</button>
+      </p>
+      <p>
+        <button
+        onclick="
+          calculator=calculator+`1`;        
+          console.log(`1`)">1</button>
+        <button
+        onclick="
+          calculator=calculator+`2`;
+          console.log(`2`)">2</button>
+        <button
+        onclick="
+          calculator=calculator+`3`;
+          console.log(`3`)">3</button>
+      </p>
+     
+        <p>
+          <button
+          onclick="
+            calculator=calculator+`+`;
+            console.log(`+`)">+</button>
+          <button
+          onclick="
+            calculator=calculator+`0`;
+            console.log(`0`)">0</button>
+          <button
+          onclick="  
+            calculator= eval(calculator);
+            console.log(`=${calculator}`);
+            ">=</button>
+        </p>
+          <Script>
+              let calculator=0;
+              console.log(`${calculator}`);
+          </Script>
+        
+    </body>
+  </html>

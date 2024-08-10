@@ -1,0 +1,34 @@
+<!doctype html>
+  <html>
+    <head>
+      <title>
+        DOM
+      </title>
+    </head>
+    <body>
+      <button>PANGIT MO!</button>
+      <button class="js-button1">GANDA!</button>
+      <input type="text"placeholder="Type anything"class="js-typing" onkeyup="typeReflect()">
+      <p class="js-result">
+      </p>
+      
+      <script>
+        function typeReflect(){
+         const type=document.querySelector('.js-typing');
+         document.querySelector('.js-result').innerHTML=type.value;
+         console.log (type.value);
+        }
+        console.log(document.title);
+       // help to change the title using js 
+        document.title='DOM1';
+        //can access,add,change inside the object using innerHTML
+        //document.body.innerHTML='hello world';
+        //document.qeurySelector() get element from html and put in js
+       console.log(document.querySelector('button')
+        .innerHTML='Maganda na pala');
+       console.log( document.querySelector('.js-button1'));// using notation help to identify the element.
+       const butElement= document.querySelector('.js-button1');// assigning it to the variable
+       console.log(butElement);
+      </script>
+    </body>
+  </html> 

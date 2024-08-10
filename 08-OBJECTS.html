@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Objects</title>
+    </head>
+    <body>
+      <script>
+        //JSON is universal using "" dont have function like javascript
+        //object store any value 
+        const product={
+          name: 'socks',
+          ['new-property']: '',//creating variable with speacial char like "-
+          price: 1090
+        };
+        console.log(product);
+        //dot notation as default
+        console.log(product.name);
+        console.log(product.price);
+        product.newproperty=`vincent`;
+        console.log(product)
+        delete product.newproperty;
+        console.log(product);
+        // alternative calling for an dot not. is bracket notation['']
+        console.log(product['new-property']);
+
+      </script>
+    </body>
+</html>
