@@ -12,7 +12,7 @@ function addtodo(){
 for(let count=0;count<inputElement.length;count++){
     
     const value=inputElement[count];// using variable inside the bracket well help access value inside an array
-     const html= `<p>${value}</p>`;
+     const html= `<p>${value}</p><button>Delete</button>`;
      htmlLists+=html;
 
 }
