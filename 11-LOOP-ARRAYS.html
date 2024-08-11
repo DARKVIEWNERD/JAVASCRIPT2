@@ -6,7 +6,21 @@
             </title>
         </head>
         <body>
+            <input type="text"class="js-text">
+            <button onclick="Loop();">ADD</button>
             <script>
+                function Loop(){
+                    const Array=[];
+                    const text=document.querySelector('.js-text').value;
+                   
+                    Array.push(text);
+                     console.log(Array.length);
+                    for(i=0;i<Array.length;i++){
+                       
+                        console.log(Array[i]);
+                    }
+                   
+                }
                 const Array=[10,20,30];
                 console.log(Array);
                 console.log(Array.length);
