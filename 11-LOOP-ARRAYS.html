@@ -9,16 +9,14 @@
             <input type="text"class="js-text">
             <button onclick="Loop();">ADD</button>
             <script>
+                 const Array2=[];
                 function Loop(){
-                    const Array=[];
-                    const text=document.querySelector('.js-text').value;
                    
-                    Array.push(text);
-                     console.log(Array.length);
-                    for(i=0;i<Array.length;i++){
-                       
-                        console.log(Array[i]);
-                    }
+                    const text=document.querySelector('.js-text').value;
+                    
+                    Array2.push(text);
+                    console.log(Array2);
+                     
                    
                 }
                 const Array=[10,20,30];

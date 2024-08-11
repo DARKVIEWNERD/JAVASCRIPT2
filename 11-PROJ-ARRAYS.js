@@ -1,7 +1,7 @@
-
+const inputElement=[];
 
 function addtodo(){
-    const inputElement=[];
+   
    const todoList= document.querySelector('.js-todo-name').value;
    const todoDate= document.querySelector('.js-todo-date').value;
    
@@ -20,6 +20,12 @@ for(let count=0;count<inputElement.length;count++){
     document.querySelector('.js-todo-list').innerHTML= htmlLists;
     
 
+}
+const inputElement2=[];
+function todo2(){
+    const result=document.querySelector('.js-todo-name2').value;
+    inputElement2.push(result);
+    console.log(inputElement2);
 }
 
 
