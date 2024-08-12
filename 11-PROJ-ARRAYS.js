@@ -8,7 +8,7 @@ function render(){
         const{name,duedate}=valueobject;
          const html= 
          `<p>${name}${duedate}<button
-         onclick="inputElement.splice(${count},1);render();"
+         onclick="inputElement.splice(${count},1);render();"class="Delete-button"
          >Delete</button></p>`;//error misused of function that's why there bug like stay button etc.
          htmlLists+=html;
     
