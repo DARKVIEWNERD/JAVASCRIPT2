@@ -3,9 +3,6 @@ body{
     font-weight: bold;
    
 }
-.title{
-    font-size:30px ;
-}
 .list-grid{
     display: grid;
     grid-template-columns: 300px 200px 150px;
