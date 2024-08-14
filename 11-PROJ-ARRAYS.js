@@ -7,9 +7,10 @@ function render(){
         const valueobject=inputElement[count];// using variable inside the bracket well help access value inside an array     
         const{name,duedate}=valueobject;
          const html= 
-         `<p>${name}${duedate}<button
-         onclick="inputElement.splice(${count},1);render();"class="Delete-button"
-         >Delete</button></p>`;//error misused of function that's why there bug like stay button etc.
+         `<div>${name}</div>
+         <div>${duedate}</div>
+         <button onclick="inputElement.splice(${count},1);render();"class="Delete-button"
+         >Delete</button>`;//error misused of function that's why there bug like stay button etc.
          htmlLists+=html;
     
     }
