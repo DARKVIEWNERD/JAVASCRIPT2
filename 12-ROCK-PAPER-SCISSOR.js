@@ -8,7 +8,10 @@
     
     let autoplaying=false;
     let IntervalID;
-    
+    function updateGame(){
+      document.querySelector('.js-score')
+      .innerHTML= `win ${score.win} lose ${score.lose} Tie ${score.tie}`;
+      }
     function resetGame(){
     score={
       win: 0,
@@ -20,6 +23,7 @@
     localStorage.removeItem('score');
     console.log(JSON.parse(localStorage.getItem('score')));
     }
+  
     updateGame(); 
     
     function AutoPlay(){
@@ -59,10 +63,7 @@
         return computerMove;
 
     }
-    function updateGame(){
-    document.querySelector('.js-score')
-    .innerHTML= `win ${score.win} lose ${score.lose} Tie ${score.tie}`;
-    }
+    
 
   
   
