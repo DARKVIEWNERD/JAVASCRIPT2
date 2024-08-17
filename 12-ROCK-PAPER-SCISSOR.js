@@ -8,6 +8,7 @@
     
     let autoplaying=false;
     let IntervalID;
+    
     function resetGame(){
     score={
       win: 0,
