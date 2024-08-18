@@ -29,7 +29,7 @@
     function AutoPlay(){
        
       if(!autoplaying){
-        IntervalID= setInterval(function (){
+        IntervalID= setInterval(()=>{
       const  PlayerMove=pickComputerMove();
         playGame(PlayerMove);
       },3000);
