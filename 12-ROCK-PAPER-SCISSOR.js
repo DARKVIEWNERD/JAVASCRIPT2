@@ -3,7 +3,7 @@ let score= JSON.parse(localStorage.getItem('score'))||{//to use it need to have|
   win:0,
   lose:0,
   tie:0
-}    
+};   
 
 
 let autoplaying=false;
