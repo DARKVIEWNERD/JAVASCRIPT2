@@ -3,7 +3,7 @@ const inputElement=[];
 
 function render(){
     let htmlLists='';
-    inputElement.forEach(function (valueobject,i) {
+    inputElement.forEach((valueobject,i)=> {
         const{name,duedate}=valueobject;
          const html= 
          `<div>${name}</div>
