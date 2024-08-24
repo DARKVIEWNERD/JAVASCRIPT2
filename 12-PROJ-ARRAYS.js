@@ -8,14 +8,25 @@ function render(){
          const html= 
          `<div>${name}</div>
          <div>${duedate}</div>
-         <button onclick="inputElement.splice(${i},1);render();"class="Delete-button"
+         <button class="Delete-button js-delete"
          >Delete</button>`;//error misused of function that's why there bug like stay button etc.
          htmlLists+=html;
     });
     
     document.querySelector('.js-todo-list').innerHTML= htmlLists;
     console.log(htmlLists);
+    document.querySelectorAll('.js-delete')
+    .forEach((deleteButton,i)=>{
+        deleteButton.addEventListener('click',()=>{
+            inputElement.splice(i,1);
+            render();
+        });
+
+    });
 }
+document.querySelector('.js-button').addEventListener('click',()=>{
+    addtodo();
+});
 function addtodo(){
    
  
