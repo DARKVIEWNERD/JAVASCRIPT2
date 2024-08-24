@@ -23,11 +23,34 @@ else{
   autoplaying=false;
 }
 } 
-document.querySelector('.js-button-rock').addEventListener('click',()=>{
-playGame('rock');
-console.log('clicked');
-});
+  document.querySelector('.js-button-rock').addEventListener('click',()=>{
+  playGame('rock');
+  console.log('clicked');
+  });
+  document.querySelector('.js-button-paper').addEventListener('click',()=>{
+    playGame('paper');
+    console.log('clicked');
+    });
+  document.querySelector('.js-button-scissor').addEventListener('click',()=>{
+    playGame('scissors');
+    console.log('clicked');
+  });
 
+  document.body.addEventListener('keydown',(event)=>{
+    if(event.key==='r'){
+      playGame('rock');
+      console.log(`${event.key} pressed`);
+    }
+   else if(event.key==='p'){
+      playGame('paper');
+      console.log(`${event.key} pressed`);
+    }
+   else if(event.key==='s'){
+      playGame('scissors');
+      console.log(`${event.key} pressed`);
+    }
+    else console(event.key);
+  });
 
 function playGame(PlayerMove){
   let result='';

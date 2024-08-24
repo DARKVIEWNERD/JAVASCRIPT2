@@ -7,7 +7,7 @@
       </title>
     </head>
     <body>
-      <script src="12-ROCK-PAPER-SCISSOR.js"></script>
+      
       <div class="container"> 
         <p class="title">
           Rock Paper Scissor
@@ -15,14 +15,11 @@
         <button class="button-move js-button-rock" >
           <img src="rock-emoji.png" class="moves"></button>
   
-        <button class="button-move"  onclick="
-          playGame('paper'); 
-          console.log(pickComputerMove()); ">
+        <button class="button-move js-button-paper">
           <img src="paper-emoji.png"class="moves"></button>
   
-        <button class="button-move"  onclick="
-          playGame('scissors');
-          console.log(pickComputerMove()); ">                                        
+        <button class="button-move js-button-scissor"  
+          >                                        
           <img src="scissors-emoji.png"class="moves"></button>
   
         <p class="js-result result">LOSE!</p>
@@ -38,5 +35,6 @@
           AutoPlay
         </button>
          </div>
+         <script src="ROCK-PAPER-SCISSOR.js"></script>
     </body>
   </html> 
