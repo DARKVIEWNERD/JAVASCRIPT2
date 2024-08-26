@@ -1,20 +1,31 @@
-<!doctype html>
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12-Advanced Function</title>
+</head>
+<body>
+  <h1 class="js-title">12-Advanced Function</h1>
+  <button class="js-button">Click me</button>
 
-    </head>
-    <body>
-        <button class="js-button">finish</button>
-        <script>
-            const button = document.querySelector('.js-button');
-            button.addEventListener('click', () => {
-            const originalText = button.innerHTML;
-            button.innerHTML = 'finished!';
+  <script>
+    let title = document.querySelector('.js-title');
+    let num = 2;
+    let button = document.querySelector('.js-button');
 
-            setTimeout(() => {
-            button.innerHTML = originalText;
-            }, 1000);
-            });
-        </script>
-    </body>
+    button.addEventListener('click', () => {
+      num++;
+      console.log(num);
+    });
+
+    setInterval(() => {
+      if (title.textContent === '12-Advanced Function') {
+        document.title = `(${num}) New Messages`;
+      } else {
+        document.title = '12-Advanced Function';
+      }
+    }, 1000);
+  </script>
+</body>
 </html>
