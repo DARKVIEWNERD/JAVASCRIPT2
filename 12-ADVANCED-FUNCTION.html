@@ -1,18 +1,45 @@
 <!DOCTYPE html>
   <html>
       <head>
-        <title>
+        <title class="js.title">
           12-Advance Function
         </title>
       </head>
       <body>
-        <button class="js-button">click</button>
+        <button class="js-button">Add to cart</button>
+        <p class="js-text"></p>
         <script>
-          const buttonELement=document.querySelector('.js-button');
+          /*const buttonELement=document.querySelector('.js-button');
           buttonELement.addEventListener('click',()=>{console.log('click2');});
-          function addNum(array, i){return array.map((value)=>value+num);}
+          function addNum(array, i){return array.map((value)=>value+num);}*/                 
           
-          
+            const button=document.querySelector('.js-button');
+              /*
+              button.addEventListener('click',()=>{
+                document.querySelector('.js-button').innerHTML='Finished!';
+                setTimeout(() => {
+                  button.innerHTML=buton;
+                }, 1000);});*/
+              /*
+               button.addEventListener('click',()=>{
+                button.innerHTML='Looding....';
+                setTimeout(()=>{button.innerHTML='finished!'},1000);
+               });*/
+          /*
+          let timeoutID;
+        
+              const text=document.querySelector('.js-text');
+              button.addEventListener('click',()=>{
+                text.innerHTML='Added!';
+
+                clearTimeout(timeoutID);
+
+              timeoutID=setTimeout(()=>{text.innerHTML='';},2000);               
+           
+
+            });*/
+            
+       
          
         </script>
       </body>
