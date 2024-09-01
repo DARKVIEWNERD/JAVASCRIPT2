@@ -7,11 +7,12 @@
       </title>
     </head>
     <body>
-      <script src="12-ROCK-PAPER-SCISSOR.js"></script>
+      
       <div class="container"> 
         <p class="title">
           Rock Paper Scissor
         </p>
+<<<<<<< HEAD
         <button class="button-move" onclick="
          playGame('rock');
           console.log(pickComputerMove()); ">
@@ -26,19 +27,30 @@
           playGame('scissors');
           console.log(pickComputerMove()); ">                                        
           <img src="scissors-emoji.png"class="moves js-scissor"></button>
+=======
+        <button class="button-move js-button-rock" >
+          <img src="rock-emoji.png" class="moves"></button>
+  
+        <button class="button-move js-button-paper">
+          <img src="paper-emoji.png"class="moves"></button>
+  
+        <button class="button-move js-button-scissor"  
+          >                                        
+          <img src="scissors-emoji.png"class="moves"></button>
+>>>>>>> bee64712761ce66b15deaee03ecbd81db7b1a7e0
   
         <p class="js-result result">LOSE!</p>
         <p class="js-moves moves">
         </p>
         <p class="js-score score"> </p>
-        <button onclick="
-          resetGame();updateGame();"class="reset">
-          
+        <button class="reset js-reset">
           ResetScore      
         </button>
-        <button class="auto-Play"onclick="AutoPlay();">
+        <button class="auto-Play js-auto-playing"onclick="AutoPlay();">
           AutoPlay
         </button>
+        <p class="js-confirmation"></p>
          </div>
+         <script src="ROCK-PAPER-SCISSOR.js"></script>
     </body>
   </html> 

@@ -1,0 +1,66 @@
+  <!DOCTYPE html>
+  <html>
+      <head>
+        <title class="js-title">
+          12-Advanced Function
+        </title>
+      </head>
+      <body>
+        <button class="js-button">Add </button>
+        <button class="js-remove">Remove</button>
+        <p class="js-text"></p>
+        <script>
+          /*const buttonELement=document.querySelector('.js-button');
+          buttonELement.addEventListener('click',()=>{console.log('click2');});
+          function addNum(array, i){return array.map((value)=>value+num);}*/                 
+          
+            const button=document.querySelector('.js-button');
+            const button2=document.querySelector('.js-remove');
+              /*
+              button.addEventListener('click',()=>{
+                document.querySelector('.js-button').innerHTML='Finished!';
+                setTimeout(() => {
+                  button.innerHTML=buton;
+                }, 1000);});*/
+              /*
+               button.addEventListener('click',()=>{
+                button.innerHTML='Looding....';
+                setTimeout(()=>{button.innerHTML='finished!'},1000);
+               });*/
+          /*
+          let timeoutID;
+        
+              const text=document.querySelector('.js-text');
+              button.addEventListener('click',()=>{
+                text.innerHTML='Added!';
+
+                clearTimeout(timeoutID);
+
+              timeoutID=setTimeout(()=>{text.innerHTML='';},2000);               
+           
+
+            });*/
+          let title=document.querySelector('.js-title'); 
+          let num=2;
+          button.addEventListener('click',()=>{
+            num++;
+          console.log(num)});
+          button2.addEventListener('click',()=>{
+            num--;
+          console.log(num)});
+         
+            
+       
+         setInterval(()=>{
+          if(document.title==='12-Advanced Function'&& num>0){
+           
+            document.title=`(${num}) New Messages`;
+          }
+          
+          else {document.title='12-Advanced Function';}
+         },1000);   
+       
+         
+        </script>
+      </body>
+  </html>
